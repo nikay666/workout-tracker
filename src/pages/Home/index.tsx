@@ -5,6 +5,8 @@ import { styled } from '@mui/material/styles';
 
 import { BannerProps, BannerSizes } from '~/components/Banner';
 import BannerList from '~/components/BannerList';
+import WeekBar from '~/components/WeekBar';
+import { Day } from '~/components/WeekBar/types';
 import { BaseLayout } from '~/modules/layout';
 
 import { theme } from '~/theme';
@@ -60,7 +62,7 @@ const bigBanners: BannerProps[] = [
     size: BannerSizes.big,
   },
   {
-    id: '1',
+    id: '2',
     title: 'Тренировка на ягодицы',
     description: '',
     image:
@@ -81,7 +83,7 @@ const smallBanners: BannerProps[] = [
     size: BannerSizes.small,
   },
   {
-    id: '1',
+    id: '2',
     title: 'Тренировка на ягодицы',
     description: '',
     image:
@@ -99,14 +101,23 @@ const HomePageLayout = styled('div')({
   paddingBottom: theme.spacing(2),
 });
 
+const week: Day[] = [
+  { data: '12', complete: false },
+  { data: '13', complete: false },
+  { data: '14', complete: false },
+  { data: '15', complete: true },
+  { data: '16', complete: false },
+  { data: '17', complete: true },
+  { data: '18', complete: false },
+];
+
 const HomePage = () => {
   return (
     <BaseLayout>
       <HomePageLayout>
         <Typography variant="h5">Мои тренировки</Typography>
         <BannerList title="Любимые тренировки" banners={banners} />
-        <BannerList title="Последние трениировки" banners={bigBanners} />
-        <BannerList title="Последние трениировки" banners={smallBanners} />
+        <WeekBar days={week} />
       </HomePageLayout>
     </BaseLayout>
   );
