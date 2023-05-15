@@ -25,6 +25,13 @@ export interface Tag {
   icon: string;
 }
 
+
+export interface WeightGoal {
+  current: number;
+  goal: number;
+  initial: number;
+}
+
 export interface User {
   id: string;
   name: string;
@@ -43,6 +50,7 @@ export interface User {
 
   settings: Settings;
 
+  goal: WeightGoal;
 }
 
 export interface Settings {

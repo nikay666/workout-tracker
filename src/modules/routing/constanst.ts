@@ -5,5 +5,6 @@ export enum ROUTES {
   settings = '/settings',
   workout = '/workout',
   workoutList = '/workout-list',
-  login = '/login'
+  login = '/login',
+  profile = '/profile',
 }

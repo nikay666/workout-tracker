@@ -14,6 +14,8 @@ interface Props {
 
 const StyledPaper = styled(Paper)({
   minHeight: '100%',
+  paddingTop: theme.spacing(2),
+  paddingBottom: theme.spacing(2),
 });
 
 const BaseLayout: React.FC<Props> = ({ className, children }) => {

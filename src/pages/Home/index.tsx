@@ -97,8 +97,6 @@ const HomePageLayout = styled('div')({
   display: 'flex',
   flexDirection: 'column',
   gap: theme.spacing(8),
-  paddingTop: theme.spacing(2),
-  paddingBottom: theme.spacing(2),
 });
 
 const week: Day[] = [
